@@ -6,15 +6,29 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Lockedme {
-
-
+	
+	Lockedme(){
+		System.out.println("Welcome To LockedMe.com");
+		System.out.println("========================================");
+		System.out.println("Application name   :    \t LockersApp");
+		System.out.println("Developed by       :     \t Nisha G ");
+		System.out.println("App description    :     \t The prototype of the application");
+		System.out.println("========================================");
+	
+	}
 
 	public static void main(String[] args) throws IOException {
-		String path = "D:\\Project-1 Virtual Key\\";
+		Lockedme lk =new Lockedme();
+		
+
+		String path = "E:\\Project-Phase-1\\";
+	    boolean running =false;
+	    
 	
 		Scanner sc = new Scanner(System.in);
-		
-			System.out.println("Please select the options to perform 0.display 1.file operations 2.exit ");
+	
+		while(true) {
+			System.out.println("Please select the options to perform  \n 0.display \n 1.file operations \n 2.exit  ");
 			int choice = sc.nextInt();
 
 			switch(choice) {
@@ -28,7 +42,7 @@ public class Lockedme {
 				}
 				break;
 			case 1:
-				while(true) {
+				
 				System.out.println(" Select the task to perform 4.add 5.delete 6.search 7.exit");
 				int choice1=sc.nextInt();
 				switch(choice1) {
@@ -95,17 +109,22 @@ public class Lockedme {
 					break;//case c
 
 				case 7:
-					System.exit(choice1);
+					if(running =true ) {
+					System.out.println("File Operations task exited successfully.");}
 					
-					
-
+					break;
+				
 				}// sub switch
-			}// main case1
-			
+		
+				
 			case 2:
+				if(running !=true) {
+				System.out.println("Logged of from Application");
 				System.exit(choice);
+				}
 				break;
 				
 			}
+	}
 		}
-		}
+	}
