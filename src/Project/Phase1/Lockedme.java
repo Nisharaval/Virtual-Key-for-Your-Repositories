@@ -10,7 +10,7 @@ public class Lockedme {
 
 
 	public static void main(String[] args) throws IOException {
-		String path = "D:\\Project-1 Virtual Key\\";
+		String path = "E:\Project-Phase-1\\";
 	
 		Scanner sc = new Scanner(System.in);
 		
