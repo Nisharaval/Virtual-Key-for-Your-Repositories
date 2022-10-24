@@ -18,13 +18,13 @@ public class Lockedme {
 	}
 
 	public static void main(String[] args) throws IOException {
+
 		Lockedme lk =new Lockedme();
 		
 
 		String path = "E:\\Project-Phase-1\\";
 	    boolean running =false;
 	    
-	
 		Scanner sc = new Scanner(System.in);
 	
 		while(true) {
@@ -32,6 +32,7 @@ public class Lockedme {
 			int choice = sc.nextInt();
 
 			switch(choice) {
+			
 			case 0:
 				System.out.println("Displaying the files in this path" +path);
 				File fd=new File(path);//assigning the path to fd1
@@ -42,7 +43,7 @@ public class Lockedme {
 				}
 				break;
 			case 1:
-				
+				//while(true) {
 				System.out.println(" Select the task to perform 4.add 5.delete 6.search 7.exit");
 				int choice1=sc.nextInt();
 				switch(choice1) {
@@ -109,14 +110,14 @@ public class Lockedme {
 					break;//case c
 
 				case 7:
-					if(running =true ) {
-					System.out.println("File Operations task exited successfully.");}
-					
+				
+					System.out.println("File Operations task exited successfully.");
+					System.exit(choice1);
 					break;
 				
 				}// sub switch
-		
-				
+			//}//while
+			
 			case 2:
 				if(running !=true) {
 				System.out.println("Logged of from Application");
@@ -124,7 +125,11 @@ public class Lockedme {
 				}
 				break;
 				
-			}
+			
 	}
 		}
+
 	}
+}
+
+		
